@@ -5,5 +5,5 @@ jobs:
     #  - image: autodeploy
     steps:
       - checkout
-      - run: docker build --tag mydjango . && docker run -d --name autodeploy -p 80:80 autodeploy
+      - run: docker build --tag autodeploy . && docker run -d --name autodeploy -p 80:80 autodeploy
       - run: echo "A first hello"
