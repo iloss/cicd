@@ -1,8 +1,8 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: autodeploy
+    #docker:
+    #  - image: autodeploy
     steps:
       - checkout
       - run: docker build --tag mydjango . && docker run -d --name autodeploy -p 80:80 autodeploy
